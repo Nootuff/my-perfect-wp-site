@@ -10,7 +10,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html <?php language_attributes(); ?>><!--Will detect the language of the person viewing your site-->
 
 <head>
   <meta charset="utf-8">
@@ -31,13 +31,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">-->
 </head>
 
-<body class="blog">
+<body <?php body_class() ?> class="blog">
 
   <div id="top-navigation">
     <div class="container">
       <div class="row justify-content-end">
         <div class="col-md-6">
-          <nav class="main-menu">
+
+
+        
+          <!--<nav class="main-menu">
             <ul class="top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled">
               <li class="menu-item"><a href="index.html">Home</a></li>
 
@@ -64,7 +67,7 @@
               <li class="menu-item"><a href="index.html">Contact</a></li>
               <li class="menu-item special-menu"><a href="index.html">Join</a></li>
             </ul>
-          </nav>
+          </nav> -->
 
           <button type="button" class="navbar-open">
             <i class="mobile-nav-toggler flaticon flaticon-menu"></i>

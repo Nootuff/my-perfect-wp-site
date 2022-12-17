@@ -1,4 +1,4 @@
-<?php  
+<?php
 /**
  * This is The Header file
  *
@@ -31,7 +31,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">-->
 </head>
 
-<body <?php body_class() ?> class="blog">
+<body <?php body_class(); ?> class="blog">
 
   <div id="top-navigation">
     <div class="container">
@@ -39,7 +39,7 @@
         <div class="col-md-6">
 
 
-        
+
           <!--<nav class="main-menu">
             <ul class="top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled">
               <li class="menu-item"><a href="index.html">Home</a></li>
@@ -68,6 +68,21 @@
               <li class="menu-item special-menu"><a href="index.html">Join</a></li>
             </ul>
           </nav> -->
+
+          <?
+          
+          wp_nav_menu( //This is a wordpress function.
+            array(
+            'theme_location'	=> 'primary', // as registered in functions.php under register_nav_menus. Apparently => is how php makes key value pairs
+            'depth' 		=>  3, //3 levels deep, only one submenu within a submenu. this is how deep the menus nad submenus can go
+            'container'		=> 'nav', //html wrapper of the menu <ul>. It is a <nav> html element wrapping the ul element which will be dynamically generated. It could be <div> or <header> or whatever.
+            'container_class'	=> 'main-menu', //This is the class name of the main menu commented out see up above. The name of the element wrapping the <ul>
+            'menu_class' 		=> 'top-menu d-flex flex-row navigation top-menu justify-content-end list-unstyled', //The classes of the menu <ul> tag, you can see them commented out above.
+            'fallback_cb'		=>  false //If there is no primary menu don't default to another menu that you have not created. If primary menu is not created, show nothing.
+            )
+            );
+
+          ?>
 
           <button type="button" class="navbar-open">
             <i class="mobile-nav-toggler flaticon flaticon-menu"></i>

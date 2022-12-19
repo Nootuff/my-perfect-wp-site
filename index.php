@@ -1,9 +1,12 @@
 <?
 get_header();
 //This is a wordpress function that looks for a a header.php file in the root of your theme file.
+
+get_template_part('template-parts/banner', 'title');
+//Another wordpress function. It pulls in banner-title, note the way the title is pulled in, you can learn more about this function in the wordpress docs.
 ?>
 
-  <section class="title-banner">
+  <!--<section class="title-banner">
     <div class="container">
       <div class="row">
         <div class="col-md-10 offset-md-1 col-sm-12 offset-sm-0 overflow-hidden text-center">
@@ -34,7 +37,7 @@ get_header();
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
 
   <div class="content-area">
     <div class="container">

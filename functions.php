@@ -8,7 +8,7 @@ if(!function_exists( 'b2w_theme_setup' )){ //if this function does NOT exist wit
 
 function b2w_theme_setup(){ //These are all wordpress functions. You can find more info in the wordpress docs aboput them.
 
-load_theme_textdomain( 'bootstrap2wordpress', get_template_directory() . '/languages' ); 
+load_theme_textdomain( 'bootstrap2wordpress', get_template_directory() . '/languages' ); //Used for translations?
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails' );
 add_theme_support('html5', 

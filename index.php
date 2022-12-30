@@ -98,6 +98,8 @@ get_template_part('template-parts/banner', 'title');
             get_template_part('template-parts/content', 'exerpt'); //the first argument is the 'slug', this line of code takes the html template from the content-exerpt file.
         
           }
+        } else {
+          get_template_part('template-parts/content', 'none');
         }
 
         ?>

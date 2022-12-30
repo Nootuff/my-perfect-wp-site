@@ -97,11 +97,30 @@ $description = get_bloginfo('description', 'display');
     <div class="container">
         <div class="row flex-vertical-center">
             <div class="col-sm-6">
-                <p><strong>Want to save 20% on the course?</strong> Enter your email and we'll send you the discount
-                    code!</p>
+               <!-- <p><strong>Want to save 20% on the course?</strong> Enter your email and we'll send you the discount
+                    code!</p>-->
+
+                    <p><?php echo wp_kses_post(get_theme_mod( 'subscribe_text', '<p><strong>Want to save 20% on the course?</strong> Enter your email and we\'ll send you the discount
+                    code!</p>' )); ?><!--kses is a wp function, it sanitizes the html so people entering their own text can't input malicious code into the form.  -->
+                    </p>
+
             </div>
             <div class="col-sm-6">
-                <form action="index.html" class="" method="post">
+
+                <!--<form action="index.html" class="" method="post">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <input name="test" type="text" value="">
+                        </div>
+                        <div class="col-lg-4">
+                            <button class="btn btn-invert m-0" name="button" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </form>-->
+
+                <?php 
+$b2w_form_html = get_theme_mod( 'subscribe_form', '
+<form action="index.html" class="" method="post">
                     <div class="row">
                         <div class="col-lg-8">
                             <input name="test" type="text" value="">
@@ -111,6 +130,10 @@ $description = get_bloginfo('description', 'display');
                         </div>
                     </div>
                 </form>
+' );
+echo $b2w_form_html;
+ ?>
+
             </div>
         </div>
     </div>

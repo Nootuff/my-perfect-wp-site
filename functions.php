@@ -100,5 +100,3 @@ function b2W_pagination(){ //This function allows for post pagination, to set th
     echo wp_kses_post($links);
 
 }
-
-?>

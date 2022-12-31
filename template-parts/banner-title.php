@@ -39,6 +39,7 @@ $description = get_bloginfo('description', 'display');
                     </p>
 
                     <?php
+                    the_title('<h1 class="page-title">', '</h1>'); //This code is for the post title, the post title shows up in the site banner istelf.
 
                 } elseif (!is_front_page() && is_home()) { //If it's NOT the front page and IS the homepage...
                     $b2w_blog_title = get_the_title(get_option('page_for_posts', true)); //b2w is for "bootstrap to wordpress" just a variable name, this is a php variable.  get_option is a wp function. In wordpress you can decide if wp displays latest posts or a single static page in settings, you can set a page as the posts page. Here get_option is going to return the ID of the page assigned to display the Blog Posts Index. Overall this function gets the title and the id of the page.

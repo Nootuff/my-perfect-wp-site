@@ -112,5 +112,4 @@ get_template_part('template-parts/banner', 'title');
 
 <?
 get_footer();
-//This is a wordpress function that looks for a a footer.php file in the root of your theme file.
-?>
+//This is a wordpress function that looks for a a footer.php file in the root of your theme file. When your file ends with an opening php tag and then some php below you shouldn't put a closing php tag.

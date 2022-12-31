@@ -906,3 +906,24 @@ Text Domain: Perfect Site
     color: var(--color-yellow);
   }
   
+  .b2w-pagination{
+    /*border: 1px solid red;*/
+    text-align: center;
+  }
+
+  .b2w-pagination li{
+    font-size: 24px;
+    font-weight: bold;
+    display: inline;
+    color: black ;
+  }
+
+  .b2w-pagination li a{
+  color: red !important;
+
+  } 
+  
+  .b2w-pagination li a:hover{
+    color: purple !important;
+  
+    }

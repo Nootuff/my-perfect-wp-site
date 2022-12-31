@@ -98,6 +98,7 @@ get_template_part('template-parts/banner', 'title');
             get_template_part('template-parts/content', 'exerpt'); //the first argument is the 'slug', this line of code takes the html template from the content-exerpt file.
         
           }
+          b2W_pagination(); //This makes pagination appear at the end of the posts list
         } else {
           get_template_part('template-parts/content', 'none');
         }

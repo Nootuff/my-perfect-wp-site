@@ -772,7 +772,7 @@ Text Domain: Perfect Site
   }
   
   .copyright p {
-    color: rgba(0, 0, 0, 0.2);
+    color: red; /* rgba(0, 0, 0, 0.2);*/
     margin-bottom: 0;
     font-weight: 500;
   }

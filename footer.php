@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="copyright text-center">
-      <p>&copy; Copyright Brightside Studios Inc.</p>
+    <p> <?php echo wp_kses_post(get_theme_mod('footer_copyright', 'Copyright Adam 2023')); ?> </p>
     </div>
   </footer>
 

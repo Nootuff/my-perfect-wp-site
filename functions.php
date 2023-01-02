@@ -100,3 +100,6 @@ function b2W_pagination(){ //This function allows for post pagination, to set th
     echo wp_kses_post($links);
 
 }
+
+//Import customizer functionality
+require get_template_directory() . '/includes/customizer-b2w.php';

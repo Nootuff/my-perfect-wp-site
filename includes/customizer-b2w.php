@@ -34,9 +34,11 @@ new \Kirki\Section(
 
 new \Kirki\Field\Textarea(
     [
-        'settings' => 'subscribe_text', //This is the "theme mod" of this section in banner-title.php
+        'settings' => 'subscribe_text',
+        //This is the "theme mod" of this section in banner-title.php
         'label' => esc_html__('Subscribe Bar Text', 'bootstrap2wordpress'),
-        'section' => 'b2w_subscribe_bar', //The id of the section this control is in
+        'section' => 'b2w_subscribe_bar',
+        //The id of the section this control is in
         'default' => esc_html__('Enter ur text here!', 'bootstrap2wordpress'),
     ]
 );
@@ -49,7 +51,8 @@ new \Kirki\Field\Code(
         'section' => 'b2w_subscribe_bar',
         'default' => '',
         'choices' => [
-            'language' => 'html',  //controls the language the user can input
+            'language' => 'html',
+            //controls the language the user can input
         ],
     ]
 );
@@ -70,13 +73,17 @@ new \Kirki\Section(
 
 new \Kirki\Field\Textarea(
     [
-        'settings' => 'footer_copyright', //This is the "theme mod" of this section in it's html
+        'settings' => 'footer_copyright',
+        //This is the "theme mod" of this section in it's html
         'label' => esc_html__('SFooter copyright text', 'bootstrap2wordpress'),
-        'section' => 'b2w_footer_section', //The id of the section this control is in
+        'section' => 'b2w_footer_section',
+        //The id of the section this control is in
         'default' => 'Enter ur footer text here!',
-        'partial_refresh' => array(  //Partial refresh is what allows you to place a small blue pencil icon next to the element you want to edit in the theme customer interface. 
+        'partial_refresh' => array(
+            //Partial refresh is what allows you to place a small blue pencil icon next to the element you want to edit in the theme customer interface. 
             'footer_copyright' => array(
-                'selector' => 'footer .copyright p', //This is the element this customizer code is targetting
+                'selector' => 'footer .copyright p',
+                //This is the element this customizer code is targetting
                 'render_callback' => function () {
                     return get_theme_mode('footer_copyright');
                 }
